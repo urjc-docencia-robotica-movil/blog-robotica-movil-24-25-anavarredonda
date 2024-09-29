@@ -10,6 +10,5 @@ Para esta practica era necesario la implementacion de una maquina de estados, en
   4. Estado left
   5. Estado reverse
 
-<img src="https://urjc-my.sharepoint.com/personal/a_navarredonda_2022_alumnos_urjc_es/_layouts/15/embed.aspx?UniqueId=0f6c49bc-27f7-49e9-ba41-5e05b985c091" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="Maquina de estados.drawio"></img>
+"https://urjc-my.sharepoint.com/personal/a_navarredonda_2022_alumnos_urjc_es/_layouts/15/embed.aspx?UniqueId=0f6c49bc-27f7-49e9-ba41-5e05b985c091" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="Maquina de estados.drawio"
 
-<img src="https://urjc-my.sharepoint.com/personal/a_navarredonda_2022_alumnos_urjc_es/_layouts/15/embed.aspx?UniqueId=0f6c49bc-27f7-49e9-ba41-5e05b985c091" width="500">
