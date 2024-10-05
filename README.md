@@ -11,7 +11,7 @@ Para esta practica era necesario la implementacion de una maquina de estados, en
   5. Estado reverse
 
 Imagen con estados y transiciones entre estados:
-https://urjc-my.sharepoint.com/personal/a_navarredonda_2022_alumnos_urjc_es/_layouts/15/embed.aspx?UniqueId=0f6c49bc-27f7-49e9-ba41-5e05b985c091
+https://urjc-my.sharepoint.com/:i:/g/personal/a_navarredonda_2022_alumnos_urjc_es/EbxJbA_3J-lJukFeBbmFwJEBq9IL9OpzEt8mvHaoFNRqPg?e=W2UtYv
 
 El estado en el que la maquina de estados iniciara sera en el estado initial, en este estado el roboto girara dibujando una espiral creciente hasta toparse con un obstaculo que detectara el bumper. En funcion de que parte del bumper detecte la colision, pasara al estado reverse(colision frontal), estado left(colision en la derecha del bumper), o estado right(colision en la parte izquierda del bumper). Este estado dibuja una espiral creciente con la intencion de aspirar una gran cantidad de area antes de toparse con el primer obstaculo. Tras el primer cambio de estado, la maquina de estados nunca mas volvera a este estado inicial.
 
