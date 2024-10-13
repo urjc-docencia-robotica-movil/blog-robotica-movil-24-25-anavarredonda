@@ -1,5 +1,12 @@
 # blog-robotica-movil-24-25-anavarredonda
 -----------------------------------------
+# P2 - Follow Line
+
+## Descripcion del algoritmo
+
+## Problemas encontrados y soluciones para ellos
+
+
 # P1 - Vacuum Cleaner
 
 ## Descripcion del algoritmo
