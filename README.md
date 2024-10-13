@@ -3,9 +3,24 @@
 # P2 - Follow Line
 
 ## Descripcion del algoritmo
+En esta practica se pedia implementar un sigue lineas a traves de una camara, implementando dos modelos diferentes, un modelo heuristico y uno no heuristico, para ellos en ambos modelos se debe de filtrar primero la imagen proporcionada por la camara.
+Para filtrar la imagen he utilizado un filtro HSV pues es mas fiable que un filtro RGB, con este filtro obtenemos una imagen solo con la linea roja a seguir.
+Una vez que hemos obtenido la imagen filtrada, debemos de elegir en que parte de la imagen debemos de fijarnos, para ello he eligido la fila 30 a partir del medio de la imagen, por lo que tenemos una porcion de la linea que permite conocer bien lo que se encuentra adelante del coche.
+
+Una vez que tenemos la porcion de la linea que vamos a tomar, encontramos el punto medio de la linea estando de frente al coche, en este caso esta en la columna 319 debido a que la camara esta ligeramente desplazada a la izquierda, tomaremos esta columna como referencia, tras esto debemos de obtener todos los pixeles rojos en la linea, y obtener el punto medio de esa franja roja, lo que indicara el punto medio de la linea roja actualmente, comparamos el punto medio obtenido de la linea con la referencia, por lo que obtenemos el numero de pixeles de error que tiene el coche respecto a la imagen, con este error podemos implementar un PID.
+
+Para la implementacion del PID, he implementado un PID que controla la velocidad angular, y otro para la velociada lineal.
+Para la velocidad angular he seguido la formula clasica del PID de (Kp * error + Kd * (error - prev_error)) * angular_velocity, con lo que dependiendo del signo del error, que indicara hacia que lado se ha perdido la linea, girara hacia la derecha o la izquierda buscando a la linea.
+Para la velocidad linear he implementado una velocidad base, y la velocidad calculada por el controlador se le resta: linear_velocity - min(abs( Kp_V * error + Kd_V * (error - prev_error)), 13). Ademas de que no queremos que el coche vaya hacia atras por lo que nos quedamos siempre con valores positivos, y no queremos que el coche se detenga, por lo que establecemos un maximo de 13 que se le puede restar  a la velocidad base, con esto hacemos que el controlador frene el coche cuando hay error, es decir cuando se esta en una curva.
+
+Ademas en caso de que se pierda la imagen, he implementado un metodo de recuperacion que permite encontrar la linea, que consiste en dar marcha atras ligeramente, y girar buscando la linea por el ultimo lado que se ha visto.
 
 ## Problemas encontrados y soluciones para ellos
+El principal problema de este problema era ajustar los PIDS en funcion del modelo, para evitar que oscile excesivamente, mientras que da la vuelta al circuito de manera rapida.
 
+Otro problema que tuve fue que el error obtenido es demasiado grande, pues las velocidades estan en m/s, y el error en pixeles, por lo que para solucionarlo dividi el error entre 250.
+
+## Video demostracion del algoritmo
 
 # P1 - Vacuum Cleaner
 
