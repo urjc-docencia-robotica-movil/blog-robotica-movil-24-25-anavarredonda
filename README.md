@@ -37,7 +37,8 @@ https://urjc-my.sharepoint.com/:i:/g/personal/a_navarredonda_2022_alumnos_urjc_e
 
 El estado en el que la maquina de estados iniciara sera en el estado initial, en este estado el roboto girara dibujando una espiral creciente hasta toparse con un obstaculo que detectara el bumper. En funcion de que parte del bumper detecte la colision, pasara al estado reverse(colision frontal), estado left(colision en la derecha del bumper), o estado right(colision en la parte izquierda del bumper). Este estado dibuja una espiral creciente con la intencion de aspirar una gran cantidad de area antes de toparse con el primer obstaculo. Tras el primer cambio de estado, la maquina de estados nunca mas volvera a este estado inicial.
 
-El estado left consiste en que el robot detenga su moviento lineal, y haga un moviento rotatorio hacia la izquierda, el robot entrara en este estado cuando el bumper derecho se active, este estado es alcanzable desde los estados initial, y advance. El estado cambiara a advance una vez que el bumper derecho deje de activarse.
+El estado left consiste en que el robot detenga su moviento lineal, y haga un moviento rotatorio hacia la izquierda, el robot entrara en este estado cuando el bumper derecho se active, este estado es alcanzable desde los estados initial, y advance. El estado cambiara a advance[No-ackerman.webm](https://github.com/user-attachments/assets/37c2b984-2051-415b-a096-b62ed21f4ee3)
+ una vez que el bumper derecho deje de activarse.
 
 El estado right consiste en que el robot detenga su moviento lineal, y haga un moviento rotatorio hacia la derecha, el robot entrara en este estado cuando el bumper izquierdo se active, este estado es alcanzable desde los estados initial, y advance. El estado cambiara a advance una vez que el bumper izquierdo deje de activarse.
 
