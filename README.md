@@ -21,6 +21,9 @@ El principal problema de este problema era ajustar los PIDS en funcion del model
 Otro problema que tuve fue que el error obtenido es demasiado grande, pues las velocidades estan en m/s, y el error en pixeles, por lo que para solucionarlo dividi el error entre 250.
 
 ## Video demostracion del algoritmo
+No ackerman: https://urjc-my.sharepoint.com/:v:/g/personal/a_navarredonda_2022_alumnos_urjc_es/Eai5IgNSob9HjgKcfpBlMRoB4AuFBo7ytgdBm3kv1j9sqw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=o1pn25
+
+Ackerman: https://urjc-my.sharepoint.com/:v:/g/personal/a_navarredonda_2022_alumnos_urjc_es/Ea_WNXhrpQNDlo3kiGy7H8cBg_sx4I7lau-vObOwX0QdvA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Q2K4NL
 
 # P1 - Vacuum Cleaner
 
