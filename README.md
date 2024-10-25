@@ -19,8 +19,6 @@ El primer problema fue como hallar una formula para el modulo repulsivo que haga
 
 Otro problema que tuve relacionado tambien con el vector repulsivo es que se daba la vuelta a ambas coordenadas, provocando que el vector estuviera dado la vuelta pero apuntando hacia el lado que no era, basto con eliminar el giro de la coordenada y.
 
-Tambien tuve un problema relacionado con la velocidad angular, puesto que le ponia la misma velocidad angular que la coordenada y del vector total, provocaba que girara muy violentamente, por lo que dividi la coordenada entre 5 para que el giro maximo fuese de 1.
-
 ## Video demostracion del algoritmo
 
 
