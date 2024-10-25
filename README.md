@@ -1,5 +1,29 @@
 # blog-robotica-movil-24-25-anavarredonda
 -----------------------------------------
+# P3 Obstacle Avoidance
+
+## Descripcion del algoritmo
+En esta practica se pedia implementar el algoritmo de navegacion local VFF, para esta practica disponiamos de los objetivos que el coche debe de alcanzar y un laser con el que detectaremos los obstaculos.
+
+Empece implementando el vector atractivo, para ello debemos de obtener el objetivo que nos dan, y pasarlo a coordenadas relativas al coche, una vez hecho esto bastaria con limitar el modulo del vector, en mi caso a 5, para evitar que se sienta extremadamente atraido por objetivos alejados.
+
+Tras esto, implemente el vector repulsivo, para este vector se tiene que tener en cuenta todos los valores obtenidos por el laser, extraemos los vectores desde el coche hasta cada deteccion del laser, tras esto debemos de modificar el modulo para que cuanto mas cerca este del coche mas grande sea el modulo, para esto yo use la siguiente formula: 0.18 / (1 + e^dist), esta formula la obtuve en la aplicacion de GeoGebra lo que me permitio ver la evolucion de la curva para seleccionar la que mas se adaptaba a lo que se necesitaba. Tras esto debemos de darle la vuelta a el vector para que este apuntando hacia el sentido contrario del obstaculo, pues nos queremos alejar de el, para esto durante el cambio a coordenadas geometricas, sumamos pi al angulo en la obtencion de la coordenada x. 
+Tras esto ponderaremos los vectores obtenidos dependiendo de donde estan los obstaculos que los han generado, puesto que si el obstaculo esta delante del coche sera mas relevante que si el obstaculo se encuentra a los lados del coche, es por esto que aumentaremos el valor de los vectores generados a partir de obstaculos delante del coche, y disminuiremos el valor de los vectores que se encuentran a los lados del coche.
+Por ultimo haremos la media de todos los valores obtenidos que sera nuestro vector repulsivo resultante.
+
+Por ultimo calcularemos el valor del vector total, cogeremos el vector atractivo y lo sumaremos al vector repulsivo, tras esto limitaremos el modulo del vector total. 
+Una vez obtenido el vector total, usaremos sus valores xy para las velocidades angulares y lineares.
+
+## Problemas encontrados y soluciones para ellos
+El primer problema fue como hallar una formula para el modulo repulsivo que haga que cuanto mas cerca del obstaculo mas grande sea el modulo, para ello use la aplicacion GeoGebra que me permitio ver la curva que seguiria el modulo, para seleccionar la mejor formula.
+
+Otro problema que tuve relacionado tambien con el vector repulsivo es que se daba la vuelta a ambas coordenadas, provocando que el vector estuviera dado la vuelta pero apuntando hacia el lado que no era, basto con eliminar el giro de la coordenada y.
+
+Tambien tuve un problema relacionado con la velocidad angular, puesto que le ponia la misma velocidad angular que la coordenada y del vector total, provocaba que girara muy violentamente, por lo que dividi la coordenada entre 5 para que el giro maximo fuese de 1.
+
+## Video demostracion del algoritmo
+
+
 # P2 - Follow Line
 
 ## Descripcion del algoritmo
