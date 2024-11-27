@@ -3,8 +3,23 @@
 # P4 Global Navigation
 
 ## Descripcion del algoritmo
+En esta practica se pedia implementar el algoritmo de navegacion global Gradient Path Planning, para esta practica disponiamos de un mapa, sobre el que crearemos el cost grid que se utilizara para navegar.
+
+Lo primero que se debe de implementar es la seleccion de objetivo que el coche debera de ancalzar, tras esto, desde ese punto seleccionado, lanzaremos el algorirmo de busqueda en anchura para recorrer el mapa hasta llegar a la posicion del coche, mientras que buscamos la posicion del coche crearemos un cost grid en el que iremos sumando el coste hasta el objetivo. Es muy importante normalizar los valores, pues el valor maximo de coste que podremos mostrar es de 255, por lo que si no normalizamos cuando llegue a 255 empezara de nuevo en 0 creando un corte en la imagen que se muestra, aunque no en el cost grid. 
+Mientras que creamos el cost grid, el coste que sumaremos a celdas que hallamos recorrido sera de 1 si hemos llegado a la celda de manera recta, y 1.4 (raiz de 2) en caso de que hallamos llegado de forma diagonal.
+
+Una vez que tenemos el cost grid hecho, el siguiente paso es engordar el coste cerca de los obstaculos, para evitar que el coche se acerque peligrosamente a ellos, o incluso choque. Para esto deberiamos de haber guardado durante la creacion del cost grid la ubicacion de los obstaculos, teniendo los obstaculos lo que hago yo es ver hacia que lado del obstaculo se encuentra la calle, y engordar un 4 casillas hacia delante. 
+Sin embargo con esto no basta, pues las esquinas no estaran engordadas, por lo que para engordar las esquinas deberemos de identificar obstaculos que tengan calle por dos lados, y engordar diagonalmente.
+
+El ultimo paso es usar el cost grid con los obstaculos engordados para navegar sobre, para esto creamos una submatriz 10x10, a partir de cost grid, alrededor de la posicon del coche, y encontramos el coste minimo dentro de esa submatriz.
+Una vez tengamos el valor minimo dentro de la submatriz, deberemos de encontrar sus coordenadas en el cost grid, y calcularemos con estas coordenadas y la posicion del coche el angulo a girar para llegar a ese punto, como cuanto menor sea el coste, mas cerca estaremos del objetivo, al final llegaremos al objetivo.
 
 ## Problemas encontrados y soluciones para ellos
+El principal problema que he tenido ha sido con las esquinas a la hora de engordar el cost grid, pues no encontraba forma de engordar las diagonales de manera eficiente sin sobrecargar los costes de otras partes del cost grid como pueden ser las rectas, finalmente lo que hago es distinguir las esquinas por separado, engordar la diagonal, y alredodor de la diagonal formando un cuandrado que esta en la esquina.
+
+Otro problema recurrente que tuve fue la inversion de indices a la hora de acceder a las matrices, pues como al mapa tiene las coordenadas iniciadas en la esquina superior izquierda, a menudo me encontraba con que las cosas no coincidian. Por suerte tiene facil solucion, invertir los indices para acceder.
+
+Por ultimo, a la hora de navegar con el coche es muy importante normalizar el angulo entre -pi y pi, para no tener problemas con angulos superiores a 360 grados.
 
 ## Video demostracion del algoritmo
 
