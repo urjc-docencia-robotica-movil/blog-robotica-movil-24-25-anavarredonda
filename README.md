@@ -1,5 +1,13 @@
 # blog-robotica-movil-24-25-anavarredonda
 -----------------------------------------
+# P4 Global Navigation
+
+## Descripcion del algoritmo
+
+## Problemas encontrados y soluciones para ellos
+
+## Video demostracion del algoritmo
+
 # P3 Obstacle Avoidance
 
 ## Descripcion del algoritmo
