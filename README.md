@@ -3,6 +3,12 @@
 # P4
 
 ## Descripcion del algoritmo
+En esta practica se pedia implementar el algoritmo de autolocalizacion MCL (Monte Carlo Localization), este algoritmo se divide en las siguientes partes:
+1.Inicializacion de las particulas
+2.Propagacion de las particulas
+3.Generacion de los laseres virtuales de cada particula
+4.Comparacion entre laser real y virtual, para asignar pesos a las particulas
+5.Algoritmo de la ruleta para seleccionar el lugar de nacimiento de la siguiente iteracion de particulas
 
 ## Problemas encontrados y soluciones a ellos
 
