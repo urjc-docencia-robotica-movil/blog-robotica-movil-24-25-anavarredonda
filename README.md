@@ -1,5 +1,15 @@
 # blog-robotica-movil-24-25-anavarredonda
 -----------------------------------------
+# P4
+
+## Descripcion del algoritmo
+
+## Problemas encontrados y soluciones a ellos
+
+## Video demonstracion del algoritmo
+https://urjc-my.sharepoint.com/:v:/g/personal/a_navarredonda_2022_alumnos_urjc_es/Efvm8b44NPxGp0IGk-33tL4BzC5QjxOd8MIsxB3ta2g5Ig?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=aK5MjH
+
+----------------------------------------------------------------------------------------------
 # P4 Global Navigation
 
 ## Descripcion del algoritmo
@@ -24,6 +34,7 @@ Por ultimo, a la hora de navegar con el coche es muy importante normalizar el an
 ## Video demostracion del algoritmo
 https://urjc-my.sharepoint.com/:v:/g/personal/a_navarredonda_2022_alumnos_urjc_es/EfWecIicX3ZGpB14AXB_OjABjrfW4phZB9dr1mX0NfMNNg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=aV7kpR
 
+----------------------------------------------------------------------------------------------
 # P3 Obstacle Avoidance
 
 ## Descripcion del algoritmo
@@ -48,6 +59,7 @@ Tambien tuve un problema relacionado con la velocidad angular, puesto que le pon
 ## Video demostracion del algoritmo
 https://urjc-my.sharepoint.com/:v:/g/personal/a_navarredonda_2022_alumnos_urjc_es/EbamzHGV54xAqxhBzx7ecDMBaBoXCKbYO1PcoMypTMY44w?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=DtM6l5
 
+----------------------------------------------------------------------------------------------
 # P2 - Follow Line
 
 ## Descripcion del algoritmo
@@ -73,6 +85,7 @@ No ackerman: https://urjc-my.sharepoint.com/:v:/g/personal/a_navarredonda_2022_a
 
 Ackerman: https://urjc-my.sharepoint.com/:v:/g/personal/a_navarredonda_2022_alumnos_urjc_es/Ea_WNXhrpQNDlo3kiGy7H8cBg_sx4I7lau-vObOwX0QdvA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Q2K4NL
 
+----------------------------------------------------------------------------------------------
 # P1 - Vacuum Cleaner
 
 ## Descripcion del algoritmo
