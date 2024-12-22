@@ -1,6 +1,6 @@
 # blog-robotica-movil-24-25-anavarredonda
 -----------------------------------------
-# P4
+# P5 Monte Carlo laser Localization
 
 ## Descripcion del algoritmo
 En esta practica se pedia implementar el algoritmo de autolocalizacion MCL (Monte Carlo Localization), este algoritmo se divide en las siguientes partes:
@@ -26,6 +26,7 @@ Una vez que se tiene los laseres virtuales simulados, compararemos las distancia
 Una vez que todas las particulas tienen un peso asignado, normalizamos estas probabilidades para que esten en el intervalo [0-1], una vez hecho la normalizacion elegiremos al azar, basado en los pesos de las particulas, las posiciones de las nuevas particulas, a partir de aquellas particulas que tenian mas peso, naceran mas particulas.
 
 ## Problemas encontrados y soluciones a ellos
+El principal problema que he encontrado es a la hora de comparar los laseres reales y virtuales, pues no estaba comparando entre los angulos correcos, sino que cogia cada laser virtual y lo comparaba con uno real, y luego con el siguiente real, es decir que si tenia 10 laseres estaba comparando esos 10 laseres virtuales con los primeros 10 grados del laser real, para solucionarlo basta con comparar entre laseres del mismo angulo.
 
 ## Video demonstracion del algoritmo
 https://urjc-my.sharepoint.com/:v:/g/personal/a_navarredonda_2022_alumnos_urjc_es/Efvm8b44NPxGp0IGk-33tL4BzC5QjxOd8MIsxB3ta2g5Ig?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=aK5MjH
