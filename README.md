@@ -10,6 +10,21 @@ En esta practica se pedia implementar el algoritmo de autolocalizacion MCL (Mont
   4. Comparacion entre laser real y virtual, para asignar pesos a las particulas
   5. Algoritmo de la ruleta para seleccionar el lugar de nacimiento de la siguiente iteracion de particulas
 
+### 1. Inicializacion de las particulas
+En esta parte se crean las primeras particulas, estas estaran creadas aleatoriamente alrededor del mapa, en esta implementacion, las particulas no pueden ser inicializadas en lugares con obstaculos en el mapa.
+
+### 2. Propagacion de las particulas
+Una vez tenemos las particulas creadas, ya sean las particulas iniciales o las particulas creadas a partir del algorimo de la ruleta en la iteraccion anterior, estas deben de propagarse junto con el robot, para ello obtendremos cuanto se ha movido el robot de los encoders, y le agregaremos un ruido a este valor, esto se agrega debido a los errores que pueda tener los encoders, asi como hacer que el algoritmo sea capaz de explorar zonas cercanas en busca de mejores relaciones entre los laseres virtuales y reales.
+
+### 3. Generacion de los laseres virtuales de cada particula
+Se generara laseres virtuales desde cada particula, el numero de laseres lanzados desde cada particula es uno de los parametros del algoritmo, estos laseres simularan el laser real en busca de la distacia a los distintos obstaculos, otro de los parametros del algoritmo se el numero de saltos durante la creacion del rayo laser, es decir que en vez de simular todos las casillas en donde se lanzara el laser, que simule una si y otra no, estos parametros ayudaran a reducir la carga computacional del algoritmo.
+
+### 4. Comparacion entre laser real y virtual, para asignar pesos a las particulas
+Una vez que se tiene los laseres virtuales simulados, compararemos las distancias encontradas por los laseres virtuales y los laseres reales, vemos la diferencia entre real y virtual, y en funcion de esa diferencia asignamos el peso de cada particula, a menor error mayor peso, pues mas parecido es el laser simulados con el real.
+
+### 5. Algoritmo de la ruleta para seleccionar el lugar de nacimiento de la siguiente iteracion de particulas
+Una vez que todas las particulas tienen un peso asignado, normalizamos estas probabilidades para que esten en el intervalo [0-1], una vez hecho la normalizacion elegiremos al azar, basado en los pesos de las particulas, las posiciones de las nuevas particulas, a partir de aquellas particulas que tenian mas peso, naceran mas particulas.
+
 ## Problemas encontrados y soluciones a ellos
 
 ## Video demonstracion del algoritmo
